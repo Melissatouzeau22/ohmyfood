@@ -9,3 +9,15 @@ header h1{
 body{
     font-family: roboto;
 }
+.search{
+display: flex;
+gap: 20px;
+align-items: center;
+justify-content: center;
+
+}
+.reserve{
+    display: block;
+    text-align: center;
+    
+}

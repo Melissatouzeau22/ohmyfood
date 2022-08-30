@@ -1,0 +1,22 @@
+{
+  "name": "ohmyfood",
+  "version": "1.0.0",
+  "description": "projet 3 ohmyfood",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:./css/style.css --style compressed"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Melissatouzeau22/ohmyfood.git"
+  },
+  "keywords": [
+    "omf"
+  ],
+  "author": "melissa touzeau",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Melissatouzeau22/ohmyfood/issues"
+  },
+  "homepage": "https://github.com/Melissatouzeau22/ohmyfood#readme"
+}
