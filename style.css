@@ -1,23 +1,48 @@
-@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Shrikhand&display=swap');
-
-header h1{
-    font-family: shrikhand;
-    text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Shrikhand&display=swap");
+header {
+  font-family: shrikhand;
+  text-align: center;
 }
 
-body{
-    font-family: roboto;
+.btn {
+  font-size: roboto;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  border: none;
+  padding: 10px;
+  border-radius: 10px;
 }
-.search{
-display: flex;
-gap: 20px;
-align-items: center;
-justify-content: center;
 
+body {
+  font-family: roboto;
 }
-.reserve{
-    display: block;
-    text-align: center;
-    
+
+.search {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
 }
+
+.reserve {
+  display: block;
+  text-align: center;
+}
+
+footer {
+  width: 100%;
+  height: auto;
+  background-color: #333333;
+}
+footer li {
+  list-style-type: none;
+}
+footer a {
+  text-decoration: none;
+  color: #fff;
+}
+footer .iconefooter {
+  color: #fff;
+}/*# sourceMappingURL=style.css.map */
