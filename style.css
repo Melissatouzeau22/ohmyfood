@@ -9,7 +9,7 @@ header {
   font-size: roboto;
   color: #fff;
   background: linear-gradient(#FF79DA, #9356DC);
-  display: flex;
+  text-align: center;
   justify-content: center;
   border: none;
   padding: 10px;
@@ -28,7 +28,6 @@ body {
 }
 
 .reserve {
-  display: block;
   text-align: center;
 }
 
