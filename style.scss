@@ -1,9 +1,13 @@
-@import "./Sass/Base/typography";
 @import "./Sass/Utils/variables";
+@import "./Sass/Base/typography";
+@import "./Sass/Base/base";
+@import "./Sass/Pages/accueil";
+@import "./Sass/Utils/mixins";
 @import "./Sass/Layout/header";
 @import "./Sass/Layout/nav";
-@import "./Sass/Composants/button";
-@import "./Sass/Base/base";
 @import "./Sass/Layout/footer";
+@import "./Sass/Composants/button";
+
+
 
 

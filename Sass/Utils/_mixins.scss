@@ -1,0 +1,15 @@
+@mixin button ($color : white){
+    width: 220px;
+    height: 50px;
+    margin-left: 80px;
+    margin-bottom: 40px;
+    text-align: center;
+    border-radius: 30px;
+    color: $color;
+    border: hidden;
+    font-size: 1em;
+}
+
+@mixin degradebutton {
+    background: linear-gradient($color-secondary, $color-primary);
+}

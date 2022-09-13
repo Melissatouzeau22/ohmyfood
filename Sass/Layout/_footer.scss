@@ -1,17 +1,30 @@
 footer {
     width: 100%;
-    height: auto; 
-    background-color:$dark-grey;
+    height: auto;
+    background-color: $dark-grey;
+
+.footer__title{
+    color:$white;
+    font-family:shrikhand;
+}
+.footer__icon{
+    color:$white;
+}
 li {
     list-style-type: none;
+    padding-left: 5%;
+    padding-bottom: 4px;
+    margin: $margin-none;
    
-   
+}
+ul{
+    padding: $padding-none;
 }
 a {
     text-decoration: none;
     color: $white;
 }
-.iconefooter{
+&__icon{
     color: $white;
 }
      
