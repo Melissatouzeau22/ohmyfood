@@ -1,0 +1,135 @@
+body{
+    font-size: roboto;
+
+}
+
+.restaurant__image{
+    width: 100%;
+}
+
+header {
+   
+    & a{
+     display: flex;
+     height: 100%;
+     width: 20px;
+     align-items: flex-start;
+     font-size : 20px;
+     font-weight: bold;
+    }
+
+  
+
+
+}
+.menu{
+    background-color: $light-grey;
+    position: relative;
+    bottom: 45px;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    padding: 0 2% 0 2%;
+    overflow: hidden;
+
+    &__head{
+    display: flex;
+    align-items: center;
+    }
+    .card__icon{
+        bottom:unset;
+    }
+
+    & span {
+    text-decoration: underline $color-tertiary 3px;
+    text-underline-offset: 7px;
+}
+    .light{
+        margin-bottom:30px;
+    }
+    
+}
+
+.menu__card{
+    cursor: pointer;
+    animation: translateCard 1s forwards;
+
+    @for $translateCard from 1 through 9 {
+        &--#{$translateCard} {
+          visibility: hidden;
+          animation-delay: 0.3s *$translateCard;
+      }
+      }
+    
+
+    .menu__description{
+      display: flex;
+      background-color: $white;
+      box-shadow:rgba(149, 157, 165, 0.2) 0px 8px 20px ;
+      border-radius: 15px;
+      margin-bottom: 15px;
+      overflow: hidden;
+    
+        & p{
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        padding-left: 10px;
+        padding-top: 5px;
+        margin: 3px;
+
+        }
+    }
+
+
+    .menu__title{
+        font-weight:bold;
+    }
+    .menu__receipe{
+        font-weight: 100;
+        padding-bottom: 5px;
+       
+    }
+    .menu_txt {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    .menu__price {
+        font-weight: 600;
+        margin-left:auto;
+        padding: 20px 20px 5px 0px; 
+        display: flex;
+        align-items: flex-end;
+        
+
+    }
+
+    .menu__check {
+        width: 50px;
+        margin-right: -50px;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        background-color:$color-tertiary;
+        color: $white;
+        border-radius: 0 15px 15px 0;
+        transition: margin-right 1s ease-in-out;
+        &:hover {
+        margin-right: 0; 
+        }
+        & i{
+        display: flex;
+        align-items: center;
+        margin-left: 12px;
+        &:hover {
+        transform: rotate(90deg);
+        animation: checkRotate 0.5s 0.5s forwards;
+        }   
+    }
+    }   
+}
+
+
+
+
+

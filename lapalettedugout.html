@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Restaurant la palette du gout</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style.scss" />
     <script
       src="https://kit.fontawesome.com/11ef62d788.js"
       crossorigin="anonymous"
@@ -13,104 +14,168 @@
   </head>
   <body>
     <header>
-      <a href="index.html"><i class="fa-solid fa-arrow-left"></i></a>
-      <h1>Ohmyfood</h1>
+      <div>
+        <a href="index.html"><i class="fleche fa-solid fa-arrow-left"></i></a>
+        <h1>Ohmyfood</h1>
+      </div>
       <img
+        class="restaurant__image"
         src="./images/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
         alt="lapalettedugout"
       />
     </header>
     <main>
-      <section class="block">
-        <h1>La palette du goût</h1>
-        <i class="card__icon fa-solid fa-heart"></i>
+      <section class="menu">
+        <div class="menu__head">
+          <h1>La palette du goût</h1>
+          <div class="card__icon">
+            <i class="fa-regular fa-heart"></i>
+          </div>
+          <div class="card__icon card__icon--full">
+            <i class="fa-solid fa-heart"></i>
+          </div>
+        </div>
         <!------------Entrées  ---------->
         <div class="entrance">
-          <div class="entrance__content">
-            <p class="light"><span>ENTR</span>ÉES</p>
-            <!------------Entrée 1 ---------->
-            <div class="entrance__one">
-              <p class="entrance__name">Fricassé d'escargot</p>
-              <p class="entrance__receipe">Au piment d'Espelette</p>
-              <p class="entrance__price">25€</p>
-              <i class="fa-solid fa-circle-check"></i>
-            </div>
-            <!------------Entrée 2 ---------->
-            <div class="entrance__two">
-              <p class="entrance__name">Foie gras de canard mi-cuit</p>
-              <p class="entrance__receipe">Et ses copaux de truffe noire</p>
-              <p class="entrance__price">35€</p>
-              <i class="fa-solid fa-circle-check"></i>
-            </div>
-            <!------------Entrée 3 ---------->
-            <div class="entrance__three">
-              <p class="entrance__name">Oeuf au plat</p>
-              <p class="entrance__receipe">
-                Assaisonnement à la truffe sur lit de caviar
-              </p>
-              <p class="entrance__price">20€</p>
-              <i class="fa-solid fa-circle-check"></i>
+          <p class="light"><span>ENTR</span>ÉES</p>
+          <!------------Entrée 1 ---------->
+          <div class="menu__card menuCard--1">
+            <div class="menu__description">
+              <div class="menu__txt">
+                <p class="menu__title">Fricassé d'escargot</p>
+                <p class="menu__receipe">Au piment d'Espelette</p>
+              </div>
+              <div class="menu__price">
+                <p>25€</p>
+              </div>
+              <div class="menu__check">
+                <i class="fa-solid fa-circle-check"></i>
+              </div>
             </div>
           </div>
-          <!------------Plats ---------->
-          <div class="dish">
-            <div class="dish__content">
-              <p class="light"><span>PLAT</span>S</p>
-              <!------------Plat 1 ---------->
-              <div class="dish__one">
-                <p class="dish__name">Filet de boeuf aux herbes</p>
-                <p class="dish__receipe">
-                  Accompagné de sa rimbanbelle de légumes
-                </p>
-                <p class="dish__price">40€</p>
-                <i class="fa-solid fa-circle-check"></i>
+          <!------------Entrée 2 ---------->
+          <div class="menu__card menuCard--2">
+            <div class="menu__description">
+              <div class="menu__txt">
+                <p class="menu__title">Fricassé d'escargot</p>
+                <p class="menu__receipe">Au piment d'Espelette</p>
               </div>
-              <!------------Plat 2 ---------->
-              <div class="dish__two">
-                <p class="dish__name">Parmentier de queue de boeuf</p>
-                <p class="dish__receipe">
-                  À la truffe noire sur sa purée de panais
-                </p>
-                <p class="dish__price">35€</p>
-                <i class="fa-solid fa-circle-check"></i>
+              <div class="menu__price">
+                <p>25€</p>
               </div>
-              <!------------Plat 3 ---------->
-              <div class="dish__three">
-                <p class="dish__name">Filet de turbo</p>
-                <p class="dish__receipe">Aux agrumes</p>
-                <p class="dish__price">44€</p>
+              <div class="menu__check">
                 <i class="fa-solid fa-circle-check"></i>
               </div>
             </div>
-            <!------------Dessert ---------->
-            <div class="desserts">
-              <div class="dessert__content">
-                <p class="light"><span>DESS</span>ERTS</p>
-                <!------------Dessert 1 ---------->
-                <div class="dessert__one">
-                  <p class="dessert__name">Paris-Brest</p>
-                  <p class="dessert__receipe">Revisité</p>
-                  <p class="dessert__price">18€</p>
-                  <i class="fa-solid fa-circle-check"></i>
-                </div>
-                <!------------Dessert 2 ---------->
-                <div class="dessert__two">
-                  <p class="dessert__name">Macaron au chocolat d'exception</p>
-                  <p class="dessert__receipe">
-                    Et glace à la vanille de Madagascar
-                  </p>
-                  <p class="dessert__price">22€</p>
-                  <i class="fa-solid fa-circle-check"></i>
-                </div>
-                <!------------Dessert 3 ---------->
-                <div class="dessert__three">
-                  <p class="dessert__name">Mousse au chocolat</p>
-                  <p class="dessert__receipe">
-                    Au piment d'Espelette et à la truffe noire
-                  </p>
-                  <p class="dessert__price">22€</p>
-                  <i class="fa-solid fa-circle-check"></i>
-                </div>
+          </div>
+          <!------------Entrée 3 ---------->
+          <div class="menu__card menuCard--3">
+            <div class="menu__description">
+              <div class="menu__txt">
+                <p class="menu__title">Fricassé d'escargot</p>
+                <p class="menu__receipe">Au piment d'Espelette</p>
+              </div>
+              <div class="menu__price">
+                <p>25€</p>
+              </div>
+              <div class="menu__check">
+                <i class="fa-solid fa-circle-check"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="entrance">
+          <p class="light"><span>ENTR</span>ÉES</p>
+          <!------------Plat 1 ---------->
+          <div class="menu__card menuCard--4">
+            <div class="menu__description">
+              <div class="menu__txt">
+                <p class="menu__title">Fricassé d'escargot</p>
+                <p class="menu__receipe">Au piment d'Espelette</p>
+              </div>
+              <div class="menu__price">
+                <p>25€</p>
+              </div>
+              <div class="menu__check">
+                <i class="fa-solid fa-circle-check"></i>
+              </div>
+            </div>
+          </div>
+          <!------------Plats 2 ---------->
+          <div class="menu__card menuCard--5">
+            <div class="menu__description">
+              <div class="menu__txt">
+                <p class="menu__title">Fricassé d'escargot</p>
+                <p class="menu__receipe">Au piment d'Espelette</p>
+              </div>
+              <div class="menu__price">
+                <p>25€</p>
+              </div>
+              <div class="menu__check">
+                <i class="fa-solid fa-circle-check"></i>
+              </div>
+            </div>
+          </div>
+          <!------------Plats 3 ---------->
+          <div class="menu__card menuCard--6">
+            <div class="menu__description">
+              <div class="menu__txt">
+                <p class="menu__title">Fricassé d'escargot</p>
+                <p class="menu__receipe">Au piment d'Espelette</p>
+              </div>
+              <div class="menu__price">
+                <p>25€</p>
+              </div>
+              <div class="menu__check">
+                <i class="fa-solid fa-circle-check"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="entrance">
+          <p class="light"><span>ENTR</span>ÉES</p>
+          <!------------Désserts 1 ---------->
+          <div class="menu__card menuCard--7">
+            <div class="menu__description">
+              <div class="menu__txt">
+                <p class="menu__title">Fricassé d'escargot</p>
+                <p class="menu__receipe">Au piment d'Espelette</p>
+              </div>
+              <div class="menu__price">
+                <p>25€</p>
+              </div>
+              <div class="menu__check">
+                <i class="fa-solid fa-circle-check"></i>
+              </div>
+            </div>
+          </div>
+          <!------------Désserts 2 ---------->
+          <div class="menu__card menuCard--8">
+            <div class="menu__description">
+              <div class="menu__txt">
+                <p class="menu__title">Fricassé d'escargot</p>
+                <p class="menu__receipe">Au piment d'Espelette</p>
+              </div>
+              <div class="menu__price">
+                <p>25€</p>
+              </div>
+              <div class="menu__check">
+                <i class="fa-solid fa-circle-check"></i>
+              </div>
+            </div>
+          </div>
+          <!------------Désserts 3 ---------->
+          <div class="menu__card menuCard--9">
+            <div class="menu__description">
+              <div class="menu__txt">
+                <p class="menu__title">Fricassé d'escargot</p>
+                <p class="menu__receipe">Au piment d'Espelette</p>
+              </div>
+              <div class="menu__price">
+                <p>25€</p>
+              </div>
+              <div class="menu__check">
+                <i class="fa-solid fa-circle-check"></i>
               </div>
             </div>
           </div>

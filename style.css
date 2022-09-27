@@ -1,12 +1,53 @@
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Shrikhand&display=swap");
+@-webkit-keyframes checkRotate {
+  0% {
+    transform: rotate(-270deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+@keyframes checkRotate {
+  0% {
+    transform: rotate(-270deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+@-webkit-keyframes translateCard {
+  from {
+    visibility: hidden;
+    transform: translateY(100%);
+  }
+  to {
+    visibility: visible;
+    transform: translateY(0%);
+  }
+}
+@keyframes translateCard {
+  from {
+    visibility: hidden;
+    transform: translateY(100%);
+  }
+  to {
+    visibility: visible;
+    transform: translateY(0%);
+  }
+}
 body {
   font-family: roboto;
+  margin: 0;
+}
+
+h1 {
+  font-family: Shrikhand;
 }
 
 h2 {
   margin: 0;
-  padding: 10px 0;
+  padding: 20px 0;
   padding-left: 10px;
   font-weight: bold;
   font-size: 20px;
@@ -18,6 +59,11 @@ h3 {
   padding-top: 10px;
   font-size: 17px;
   font-weight: bold;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
 .search {
@@ -39,6 +85,13 @@ h3 {
 .reserve {
   text-align: center;
 }
+.reserve__title {
+  font-family: roboto;
+}
+.reserve p {
+  font-weight: 100;
+  font-size: 17px;
+}
 
 .function__step {
   display: flex;
@@ -49,6 +102,7 @@ h3 {
   margin-bottom: 20px;
   border-radius: 15px;
   box-shadow: 0px 5px 10px #e6e6e6;
+  cursor: pointer;
 }
 .function__step:hover {
   background-color: #f2eafb;
@@ -70,48 +124,74 @@ h3 {
 }
 
 .card {
-  gap: 40px;
   background-color: #f2f2f2;
+  position: relative;
+}
+.card__content {
+  display: flex;
+  flex-direction: column;
+}
+.card__block {
+  width: 95%;
+  margin: 20px;
+  margin-left: 8px;
+  background-color: #fff;
+  box-shadow: 0px 5px 10px #e6e6e6;
+  border-radius: 15px;
+  overflow: hidden;
+  position: relative;
 }
 .card__restaurant {
-  width: 100%;
+  width: 60%;
   height: 160px;
   overflow: hidden;
   position: relative;
   margin: auto;
   gap: 20px;
-  text-decoration: none;
 }
 .card__image {
   width: 100%;
   height: 160px;
-  background-color: #fff;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
   -o-object-fit: cover;
      object-fit: cover;
 }
-.card__description {
-  background-color: #fff;
-  border-radius: 15px;
-  color: #000;
-  box-shadow: 0px 5px 10px #e6e6e6;
+.card__title {
+  font-size: 20px;
+  font-weight: bold;
   margin: 20px;
+  margin-bottom: 0;
 }
-.card__description p {
+.card__text {
+  font-size: 20px;
   margin: 0;
-  padding-left: 10px;
+  padding-top: 2px;
+  padding-left: 19px;
+  padding-bottom: 20px;
+  font-weight: 100;
 }
-
-.card .card__restaurant new {
-  border: 10px solid red;
+.card__restaurant.new {
   position: relative;
 }
-.card .card__restaurant new::before {
+.card__restaurant.new::before {
   content: "Nouveau";
   position: absolute;
-  height: 100px;
-  width: 50px;
+  width: 90px;
+  height: 30px;
+  text-align: center;
+  background-color: #99E2D0;
+  color: #278870;
+  bottom: 190px;
+  right: 25px;
+  padding-top: 7px;
+}
+.card__icon {
+  position: absolute;
+  bottom: 30px;
+  right: 20px;
+  font-size: 30px;
+  cursor: pointer;
 }
 
 header {
@@ -159,4 +239,173 @@ footer__icon {
   border: hidden;
   font-size: 1em;
   background: linear-gradient(#FF79DA, #9356DC);
+}
+.btn:hover {
+  transform: scale(1.09);
+  opacity: 0.9;
+  cursor: pointer;
+}
+
+.card__icon--full {
+  color: transparent;
+  background: linear-gradient(#9356DC, #FF79DA);
+  background-clip: text;
+  -webkit-background-clip: text;
+  opacity: 0;
+  transition: 0.5s ease-in-out;
+}
+.card__icon--full:active {
+  opacity: 1;
+}
+
+body {
+  font-size: roboto;
+}
+
+.restaurant__image {
+  width: 100%;
+}
+
+header a {
+  display: flex;
+  height: 100%;
+  width: 20px;
+  align-items: flex-start;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.menu {
+  background-color: #f2f2f2;
+  position: relative;
+  bottom: 45px;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+  padding: 0 2% 0 2%;
+  overflow: hidden;
+}
+.menu__head {
+  display: flex;
+  align-items: center;
+}
+.menu .card__icon {
+  bottom: unset;
+}
+.menu span {
+  -webkit-text-decoration: underline #99E2D0 3px;
+          text-decoration: underline #99E2D0 3px;
+  text-underline-offset: 7px;
+}
+.menu .light {
+  margin-bottom: 30px;
+}
+
+.menu__card {
+  cursor: pointer;
+  -webkit-animation: translateCard 1s forwards;
+          animation: translateCard 1s forwards;
+}
+.menu__card--1 {
+  visibility: hidden;
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
+}
+.menu__card--2 {
+  visibility: hidden;
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
+}
+.menu__card--3 {
+  visibility: hidden;
+  -webkit-animation-delay: 0.9s;
+          animation-delay: 0.9s;
+}
+.menu__card--4 {
+  visibility: hidden;
+  -webkit-animation-delay: 1.2s;
+          animation-delay: 1.2s;
+}
+.menu__card--5 {
+  visibility: hidden;
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
+}
+.menu__card--6 {
+  visibility: hidden;
+  -webkit-animation-delay: 1.8s;
+          animation-delay: 1.8s;
+}
+.menu__card--7 {
+  visibility: hidden;
+  -webkit-animation-delay: 2.1s;
+          animation-delay: 2.1s;
+}
+.menu__card--8 {
+  visibility: hidden;
+  -webkit-animation-delay: 2.4s;
+          animation-delay: 2.4s;
+}
+.menu__card--9 {
+  visibility: hidden;
+  -webkit-animation-delay: 2.7s;
+          animation-delay: 2.7s;
+}
+.menu__card .menu__description {
+  display: flex;
+  background-color: #fff;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 20px;
+  border-radius: 15px;
+  margin-bottom: 15px;
+  overflow: hidden;
+}
+.menu__card .menu__description p {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-left: 10px;
+  padding-top: 5px;
+  margin: 3px;
+}
+.menu__card .menu__title {
+  font-weight: bold;
+}
+.menu__card .menu__receipe {
+  font-weight: 100;
+  padding-bottom: 5px;
+}
+.menu__card .menu_txt {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.menu__card .menu__price {
+  font-weight: 600;
+  margin-left: auto;
+  padding: 20px 20px 5px 0px;
+  display: flex;
+  align-items: flex-end;
+}
+.menu__card .menu__check {
+  width: 50px;
+  margin-right: -50px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  background-color: #99E2D0;
+  color: #fff;
+  border-radius: 0 15px 15px 0;
+  transition: margin-right 1s ease-in-out;
+}
+.menu__card .menu__check:hover {
+  margin-right: 0;
+}
+.menu__card .menu__check i {
+  display: flex;
+  align-items: center;
+  margin-left: 12px;
+}
+.menu__card .menu__check i:hover {
+  transform: rotate(90deg);
+  -webkit-animation: checkRotate 0.5s 0.5s forwards;
+          animation: checkRotate 0.5s 0.5s forwards;
 }/*# sourceMappingURL=style.css.map */

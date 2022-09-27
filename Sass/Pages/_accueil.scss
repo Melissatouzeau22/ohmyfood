@@ -20,10 +20,17 @@
 }
 .reserve{
     text-align: center;
+    &__title{
+        font-family: roboto;
+    }
+    & p{
+        font-weight: 100;
+        font-size: 17px;
+    }
 }
 
 .function{
- 
+    
     &__step{
         display: flex;
         align-items: center;
@@ -33,7 +40,7 @@
         margin-bottom: 20px;
         border-radius:15px;
         box-shadow: 0px 5px 10px $grey ;
-
+        cursor:pointer;
     }
 
     &__step:hover{
@@ -60,57 +67,85 @@
 
 }
 .card{
-    gap:40px;
     background-color: $light-grey;
+    position: relative;
+
+    &__content{
+        display: flex;
+        flex-direction: column;
+    }
+    &__block{
+        width: 95%;
+        margin: 20px;
+        margin-left: 8px;;
+        background-color: $white;
+        box-shadow: 0px 5px 10px $grey ;
+        border-radius: 15px;
+        overflow: hidden;
+        position: relative;
+       
+        
+    }
 
 
     &__restaurant{
-        width: 100%;
+        width: 60%;
         height: 160px;
         overflow: hidden;
         position: relative;
         margin: auto;
         gap: 20px;
-        text-decoration: none;
+        
+       
     }
   
     &__image{
         width: 100%;
         height: 160px;
-        background-color: $white;
         border-top-left-radius: 15px;
         border-top-right-radius: 15px;
         object-fit: cover;   
        
     }
 
-    &__description{
-        background-color: $white;
-        border-radius: 15px;
-        color: $black;
-        box-shadow: 0px 5px 10px $grey ;
+    &__title{
+        font-size: 20px;
+        font-weight:bold;
         margin: 20px;
+        margin-bottom: $margin-none;
     }
-
-    &__description p {
-        margin: $margin-none;
-        padding-left: 10px;
+    &__text {
+        font-size: 20px;
+        margin:$margin-none;   
+        padding-top:2px;
+        padding-left: 19px;
+        padding-bottom:20px;
+        font-weight: 100;
+        }
+   
+    &__restaurant.new{
+        position: relative;
+        &::before{
+            content: "Nouveau";
+            position: absolute;
+            width: 90px;
+            height: 30px;
+            text-align: center;
+            background-color: $color-tertiary;
+            color:darken($color-tertiary, 40%);
+            bottom: 190px;
+            right: 25px;
+            padding-top: 7px;
+            
+        }
     }
+        
+        &__icon  {
+        position: absolute;
+        bottom: 30px;
+        right: 20px;
+        font-size: 30px;
+        cursor: pointer;     
 
-
-}
-
-
-.card{
-    .card__restaurant new{
-    border: 10px solid red;
-    position: relative;
-}
-
-.card__restaurant new::before{
-    content: "Nouveau";
-    position: absolute;
-    height: 100px;
-    width: 50px;
-}
-}
+}  
+}  

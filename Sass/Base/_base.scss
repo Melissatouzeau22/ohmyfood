@@ -1,11 +1,15 @@
 
 body{
     font-family: roboto;
+    margin: 0;
 }
 
+h1{
+    font-family: Shrikhand;
+}
 h2{
     margin:$margin-none;
-    padding: 10px 0;
+    padding:20px 0;
     padding-left: 10px;
     font-weight: bold;
     font-size: 20px;
@@ -20,3 +24,7 @@ h3{
 }
 
 
+a{
+    text-decoration: none;
+    color: inherit;
+}

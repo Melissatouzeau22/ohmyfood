@@ -8,8 +8,29 @@
     color: $color;
     border: hidden;
     font-size: 1em;
+    
+    &:hover{
+        transform: scale(1.09);
+        opacity:0.9;
+        cursor: pointer;
+    }
 }
 
 @mixin degradebutton {
     background: linear-gradient($color-secondary, $color-primary);
+}
+
+
+@mixin heart--full {
+    color: transparent;
+    background: linear-gradient($color-primary, $color-secondary);
+    background-clip: text ;
+    -webkit-background-clip: text;
+    opacity: 0;
+    transition: 0.5s ease-in-out;
+    &:active  {
+        opacity: 1;
+
+    
+    }     
 }
