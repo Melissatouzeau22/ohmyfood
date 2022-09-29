@@ -2,27 +2,33 @@ footer {
     width: 100%;
     height: auto;
     background-color: $dark-grey;
+    padding-bottom: 20px;
 
 .footer__title{
     color:$white;
     font-family:shrikhand;
+    padding-left: 5%;
 }
 .footer__icon{
     color:$white;
+  
 }
 li {
     list-style-type: none;
     padding-left: 5%;
     padding-bottom: 4px;
     margin: $margin-none;
-   
+    
 }
 ul{
     padding: $padding-none;
+    margin: 16px 0 0 0;
+    
 }
 a {
     text-decoration: none;
     color: $white;
+
 }
 &__icon{
     color: $white;

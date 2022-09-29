@@ -9,12 +9,29 @@
 }
 
 @keyframes translateCard {
-    from{
-        visibility: hidden;
-        transform: translateY(100%);
-    }
     to{
         visibility: visible;
         transform: translateY(0%);
+    }
+}
+@keyframes loader {
+    from {
+        visibility: visible;
+    }
+
+    to {
+        visibility: hidden;
+    }
+}
+
+@keyframes loaderRotate {
+    from {
+        transform: rotate(0deg);
+    }
+    50%{
+        transform: rotate(180deg);
+    }
+    to {
+        transform: rotate(360deg);
     }
 }

@@ -6,13 +6,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Oh my food</title>
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" type="" href="style.scss" />
+    <link rel="stylesheet" href="style.scss" />
     <script
       src="https://kit.fontawesome.com/11ef62d788.js"
       crossorigin="anonymous"
     ></script>
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/site.webmanifest" />
   </head>
   <body>
+    <div class="loader">
+      <div class="loader__box">
+        <div class="loader__icones">
+          <i class="fa-solid fa-utensils"></i>
+        </div>
+      </div>
+    </div>
     <header>
       <h1>Ohmyfood</h1>
     </header>
@@ -31,10 +56,10 @@
             Découvrez des restaurants d'exception, <br />
             séléctionnés par nos soins.
           </p>
+          <nav>
+            <button class="btn">Explorez nos restaurants</button>
+          </nav>
         </div>
-        <nav>
-          <button class="btn">Explorez nos restaurants</button>
-        </nav>
       </section>
       <!-- Section fonctionnement -->
       <section class="function">

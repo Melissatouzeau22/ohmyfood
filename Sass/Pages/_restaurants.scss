@@ -9,8 +9,9 @@ body{
 
 header {
    
+
     & a{
-     display: flex;
+
      height: 100%;
      width: 20px;
      align-items: flex-start;
@@ -52,11 +53,12 @@ header {
 .menu__card{
     cursor: pointer;
     animation: translateCard 1s forwards;
+    visibility: hidden;
+    transform: translateY(100%);
 
-    @for $translateCard from 1 through 9 {
-        &--#{$translateCard} {
-          visibility: hidden;
-          animation-delay: 0.3s *$translateCard;
+    @for $i from 1 through 9 {
+        &--#{$i} {  
+          animation-delay: 0.3s *$i;
       }
       }
     
@@ -68,7 +70,13 @@ header {
       border-radius: 15px;
       margin-bottom: 15px;
       overflow: hidden;
-    
+      &:hover .menu__check{
+        margin-right: 0; 
+        i{
+            transform: rotate(90deg);
+            animation: checkRotate 0.5s 0.5s forwards;
+            }  
+        }      
         & p{
         white-space: nowrap;
         overflow: hidden;
@@ -114,17 +122,12 @@ header {
         color: $white;
         border-radius: 0 15px 15px 0;
         transition: margin-right 1s ease-in-out;
-        &:hover {
-        margin-right: 0; 
-        }
+    
         & i{
         display: flex;
         align-items: center;
         margin-left: 12px;
-        &:hover {
-        transform: rotate(90deg);
-        animation: checkRotate 0.5s 0.5s forwards;
-        }   
+        
     }
     }   
 }
