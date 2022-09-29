@@ -227,18 +227,6 @@ a {
   overflow: hidden;
   position: relative;
 }
-@media screen and (min-width: 426px) and (max-width: 1920px) {
-  .card__block {
-    width: 40%;
-    margin: 0;
-  }
-}
-@media screen and (min-width: 1920px) {
-  .card__block {
-    width: 23%;
-    margin: 0;
-  }
-}
 .card__restaurant {
   width: 60%;
   height: 160px;

@@ -138,15 +138,7 @@
         overflow: hidden;
         position: relative;
        
-        @include tablette {
-            width: 40%;
-            margin: 0;
-        }
-
-        @include desktop {
-            width: 23%;
-            margin: 0;
-        }
+       
         
     }
 
