@@ -5,36 +5,46 @@ body{
 
 .restaurant__image{
     width: 100%;
+    object-fit: cover;
+    object-position: center bottom;
+
 }
 
 header {
-   
+    
+    & .header__title{
+        padding-left: 30px;
+        display: flex;
+        align-items: center;
+        justify-content:space-between;
+        
+        
+    }
+    & .header__logo{
 
+    }
     & a{
-
      height: 100%;
      width: 20px;
-     align-items: flex-start;
      font-size : 20px;
      font-weight: bold;
     }
-
-  
-
 
 }
 .menu{
     background-color: $light-grey;
     position: relative;
-    bottom: 45px;
+    bottom: 45PX;
     border-top-left-radius: 40px;
     border-top-right-radius: 40px;
     padding: 0 2% 0 2%;
     overflow: hidden;
+   
 
     &__head{
     display: flex;
     align-items: center;
+    padding: 10px;
     }
     .card__icon{
         bottom:unset;
@@ -78,9 +88,6 @@ header {
             }  
         }      
         & p{
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
         padding-left: 10px;
         padding-top: 5px;
         margin: 3px;
@@ -130,6 +137,17 @@ header {
         
     }
     }   
+
+
+}
+.commande{
+    margin: 30px;
+
+    @include desktop {
+        width: 20%;
+        bottom: 500px;
+        left: 444px;
+    }
 }
 
 

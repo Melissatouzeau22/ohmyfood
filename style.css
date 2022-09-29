@@ -142,6 +142,13 @@ a {
     padding: 0;
   }
 }
+@media screen and (min-width: 1920px) {
+  .search__content {
+    width: 30%;
+    margin-left: 35%;
+    padding: 0;
+  }
+}
 .search .reserve {
   text-align: center;
 }
@@ -152,9 +159,25 @@ a {
   font-weight: 100;
   font-size: 17px;
 }
+@media screen and (min-width: 426px) and (max-width: 1920px) {
+  .search .reserve {
+    justify-content: space-around;
+  }
+}
 
 .function {
   padding: 10px;
+}
+@media screen and (min-width: 426px) and (max-width: 1920px) {
+  .function {
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media screen and (min-width: 1920px) {
+  .function {
+    display: flex;
+  }
 }
 .function__step {
   display: flex;
@@ -203,6 +226,18 @@ a {
   border-radius: 15px;
   overflow: hidden;
   position: relative;
+}
+@media screen and (min-width: 426px) and (max-width: 1920px) {
+  .card__block {
+    width: 40%;
+    margin: 0;
+  }
+}
+@media screen and (min-width: 1920px) {
+  .card__block {
+    width: 23%;
+    margin: 0;
+  }
 }
 .card__restaurant {
   width: 60%;
@@ -253,6 +288,7 @@ a {
   position: absolute;
   bottom: 30px;
   right: 20px;
+  padding-right: 10px;
   font-size: 30px;
   cursor: pointer;
 }
@@ -302,6 +338,7 @@ footer__icon {
   color: white;
   border: hidden;
   font-size: 1em;
+  box-shadow: 2px 1px 16px -3px #333333;
   background: linear-gradient(#FF79DA, #9356DC);
 }
 .btn:hover {
@@ -328,12 +365,21 @@ body {
 
 .restaurant__image {
   width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center bottom;
+     object-position: center bottom;
 }
 
+header .header__title {
+  padding-left: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 header a {
   height: 100%;
   width: 20px;
-  align-items: flex-start;
   font-size: 20px;
   font-weight: bold;
 }
@@ -341,7 +387,7 @@ header a {
 .menu {
   background-color: #f2f2f2;
   position: relative;
-  bottom: 45px;
+  bottom: 45PX;
   border-top-left-radius: 40px;
   border-top-right-radius: 40px;
   padding: 0 2% 0 2%;
@@ -350,6 +396,7 @@ header a {
 .menu__head {
   display: flex;
   align-items: center;
+  padding: 10px;
 }
 .menu .card__icon {
   bottom: unset;
@@ -423,9 +470,6 @@ header a {
           animation: checkRotate 0.5s 0.5s forwards;
 }
 .menu__card .menu__description p {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
   padding-left: 10px;
   padding-top: 5px;
   margin: 3px;
@@ -464,4 +508,15 @@ header a {
   display: flex;
   align-items: center;
   margin-left: 12px;
+}
+
+.commande {
+  margin: 30px;
+}
+@media screen and (min-width: 1920px) {
+  .commande {
+    width: 20%;
+    bottom: 500px;
+    left: 444px;
+  }
 }/*# sourceMappingURL=style.css.map */

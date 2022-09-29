@@ -6,6 +6,7 @@
     color: $color;
     border: hidden;
     font-size: 1em;
+    box-shadow: 2px 1px 16px -3px $dark-grey ;
     
     &:hover{
         transform: scale(1.09);
@@ -30,10 +31,11 @@
         opacity: 1;
 
     
-    }     
+    }  
+       
 }
 
-@mixin toto {
+@mixin tablette {
     @media screen and (min-width : map-get($breakpoints, "tablette")) and (max-width :map-get($breakpoints, "desktop")) {
         @content;    
     }

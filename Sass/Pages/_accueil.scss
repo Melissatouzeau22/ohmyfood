@@ -44,13 +44,19 @@
             padding-right: 10px;
         }
 
-    @include toto{
+    @include tablette{
         padding : 0;
+    }
+    @include desktop {
+        width: 30%;
+        margin-left: 35%;
+        padding: 0;
     }
     }
    
 
 .reserve{
+    
     text-align: center;
     &__title{
         font-family: roboto;
@@ -59,11 +65,23 @@
         font-weight: 100;
         font-size: 17px;
     }
+    @include tablette{
+        justify-content: space-around;
+    }
 }
 }
 
 .function{
     padding: 10px;
+
+    @include tablette {
+        display: flex;
+        flex-direction: column;
+       
+    }
+    @include desktop {
+        display: flex;
+    }
     &__step{
         display: flex;
         align-items: center;
@@ -74,6 +92,7 @@
         border-radius:15px;
         box-shadow: 0px 5px 10px $grey ;
         cursor:pointer;
+      
     }
 
     &__step:hover{
@@ -96,13 +115,15 @@
         position: relative;
         right: 10px;
     }
-
+ 
 
 }
 .card{
     background-color: $light-grey;
     position: relative;
-
+    
+  
+  
     &__content{
         display: flex;
         flex-direction: column;
@@ -117,6 +138,15 @@
         overflow: hidden;
         position: relative;
        
+        @include tablette {
+            width: 40%;
+            margin: 0;
+        }
+
+        @include desktop {
+            width: 23%;
+            margin: 0;
+        }
         
     }
 
@@ -177,6 +207,7 @@
         position: absolute;
         bottom: 30px;
         right: 20px;
+        padding-right: 10px;
         font-size: 30px;
         cursor: pointer;     
 
