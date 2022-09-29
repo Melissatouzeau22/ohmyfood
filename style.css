@@ -453,6 +453,10 @@ header a {
   -webkit-animation-delay: 2.7s;
           animation-delay: 2.7s;
 }
+.menu__card--10 {
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+}
 .menu__card .menu__description {
   display: flex;
   background-color: #fff;

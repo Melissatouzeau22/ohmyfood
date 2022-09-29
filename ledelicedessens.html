@@ -4,104 +4,202 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Restaurant la palette du gout</title>
+    <title>Restaurant le délice des sens</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style.scss" />
     <script
       src="https://kit.fontawesome.com/11ef62d788.js"
       crossorigin="anonymous"
     ></script>
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/site.webmanifest" />
   </head>
   <body>
     <header>
-      <a href="index.html"><i class="fa-solid fa-arrow-left"></i></a>
-      <h1>Ohmyfood</h1>
-      <img
-        class="restaurant__image"
-        src="./images/toa-heftiba-DQKerTsQwi0-unsplash.jpg"
-        alt="ledelicedessens"
-      />
+      <div class="header__title">
+        <div class="fleche">
+          <a href="index.html"><i class="fa-solid fa-arrow-left"></i></a>
+        </div>
+        <div class="header__logo">
+          <h1>Ohmyfood</h1>
+        </div>
+      </div>
+      <div class="header__banner">
+        <img
+          class="restaurant__image"
+          src="./images/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"
+          alt="lapalettedugout"
+        />
+      </div>
     </header>
     <main>
-      <section class="block">
-        <h1>Le délice des sens</h1>
-        <i class="card__icon fa-solid fa-heart"></i>
+      <section class="menu">
+        <div class="menu__head">
+          <h1>Le délice des sens</h1>
+          <div class="card__icon">
+            <i class="fa-regular fa-heart"></i>
+          </div>
+          <div class="card__icon card__icon--full">
+            <i class="fa-solid fa-heart"></i>
+          </div>
+        </div>
         <!------------Entrées  ---------->
         <div class="entrance">
-          <div class="entrance__content">
-            <p class="light"><span>ENTR</span>ÉES</p>
-            <!------------Entrée 1 ---------->
-            <div class="entrance__one">
-              <p class="entrance__name">Tartare de thon</p>
-              <p class="entrance__receipe">Assaisonné au yuzu</p>
-              <p class="entrance__price">25€</p>
-              <i class="fa-solid fa-circle-check"></i>
-            </div>
-            <!------------Entrée 2 ---------->
-            <div class="entrance__two">
-              <p class="entrance__name">Bouchée de homard croustillant</p>
-              <p class="entrance__receipe">Et sa farandole de petits légumes</p>
-              <p class="entrance__price">35€</p>
-              <i class="fa-solid fa-circle-check"></i>
-            </div>
-            <!------------Entrée 3 ---------->
-            <div class="entrance__three">
-              <p class="entrance__name">Velouté de cèpes</p>
-              <p class="entrance__receipe">Aux truffes</p>
-              <p class="entrance__price">20€</p>
-              <i class="fa-solid fa-circle-check"></i>
+          <p class="light"><span>ENTR</span>ÉES</p>
+          <!------------Entrée 1 ---------->
+          <div class="menu__card menu__card--1">
+            <div class="menu__description">
+              <div class="menu__txt">
+                <p class="menu__title">Tartare de thon</p>
+                <p class="menu__receipe">Assaisonné au yuzu</p>
+              </div>
+              <div class="menu__price">
+                <p>25€</p>
+              </div>
+              <div class="menu__check">
+                <i class="fa-solid fa-circle-check"></i>
+              </div>
             </div>
           </div>
-          <!------------Plats ---------->
-          <div class="dish">
-            <div class="dish__content">
-              <p class="light"><span>PLAT</span>S</p>
-              <!------------Plat 1 ---------->
-              <div class="dish__one">
-                <p class="dish__name">Poulet rôti aux herbes de provence</p>
-                <p class="dish__receipe">Et sa crème de truffe</p>
-                <p class="dish__price">40€</p>
-                <i class="fa-solid fa-circle-check"></i>
+          <!------------Entrée 2 ---------->
+          <div class="menu__card menu__card--2">
+            <div class="menu__description">
+              <div class="menu__txt">
+                <p class="menu__title">Bouchée de homard croustillant</p>
+                <p class="menu__receipe">Et sa farandole de petits légumes</p>
               </div>
-              <!------------Plat 2 ---------->
-              <div class="dish__two">
-                <p class="dish__name">Langouste rôtie</p>
-                <p class="dish__receipe">Et ses légumes de saison</p>
-                <p class="dish__price">35€</p>
-                <i class="fa-solid fa-circle-check"></i>
+              <div class="menu__price">
+                <p>35€</p>
               </div>
-              <!------------Plat 3 ---------->
-              <div class="dish__three">
-                <p class="dish__name">Côte de boeuf angus</p>
-                <p class="dish__receipe">Et sa purée de panais</p>
-                <p class="dish__price">44€</p>
+              <div class="menu__check">
                 <i class="fa-solid fa-circle-check"></i>
               </div>
             </div>
-            <!------------Dessert ---------->
-            <div class="desserts">
-              <div class="dessert__content">
-                <p class="light"><span>DESS</span>ERTS</p>
-                <!------------Dessert 1 ---------->
-                <div class="dessert__one">
-                  <p class="dessert__name">Farandole de desserts</p>
-                  <p class="dessert__receipe">Du chef</p>
-                  <p class="dessert__price">18€</p>
-                  <i class="fa-solid fa-circle-check"></i>
-                </div>
-                <!------------Dessert 2 ---------->
-                <div class="dessert__two">
-                  <p class="dessert__name">Crème brulée</p>
-                  <p class="dessert__receipe">Revisitée</p>
-                  <p class="dessert__price">22€</p>
-                  <i class="fa-solid fa-circle-check"></i>
-                </div>
-                <!------------Dessert 3 ---------->
-                <div class="dessert__three">
-                  <p class="dessert__name">Tiramisu</p>
-                  <p class="dessert__receipe">À la noisette</p>
-                  <p class="dessert__price">23€</p>
-                  <i class="fa-solid fa-circle-check"></i>
-                </div>
+          </div>
+          <!------------Entrée 3 ---------->
+          <div class="menu__card menu__card--3">
+            <div class="menu__description">
+              <div class="menu__txt">
+                <p class="menu__title">Velouté de cèpes</p>
+                <p class="menu__receipe">Aux truffes</p>
+              </div>
+              <div class="menu__price">
+                <p>20€</p>
+              </div>
+              <div class="menu__check">
+                <i class="fa-solid fa-circle-check"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="dishes">
+          <p class="light"><span>PLAT</span>S</p>
+          <!------------Plat 1 ---------->
+          <div class="menu__card menu__card--4">
+            <div class="menu__description">
+              <div class="menu__txt">
+                <p class="menu__title">Poulet rôti aux herbes de Provence</p>
+                <p class="menu__receipe">Et sa crème de truffe</p>
+              </div>
+              <div class="menu__price">
+                <p>40€</p>
+              </div>
+              <div class="menu__check">
+                <i class="fa-solid fa-circle-check"></i>
+              </div>
+            </div>
+          </div>
+          <!------------Plats 2 ---------->
+          <div class="menu__card menu__card--5">
+            <div class="menu__description">
+              <div class="menu__txt">
+                <p class="menu__title">Langouste rôtie</p>
+                <p class="menu__receipe">Et ses légumes de saison</p>
+              </div>
+              <div class="menu__price">
+                <p>35€</p>
+              </div>
+              <div class="menu__check">
+                <i class="fa-solid fa-circle-check"></i>
+              </div>
+            </div>
+          </div>
+          <!------------Plats 3 ---------->
+          <div class="menu__card menu__card--6">
+            <div class="menu__description">
+              <div class="menu__txt">
+                <p class="menu__title">Côte de boeuf Angus</p>
+                <p class="menu__receipe">Et sa purée de panais</p>
+              </div>
+              <div class="menu__price">
+                <p>44€</p>
+              </div>
+              <div class="menu__check">
+                <i class="fa-solid fa-circle-check"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="desserts">
+          <p class="light"><span>DESS</span>ERTS</p>
+          <!------------Désserts 1 ---------->
+          <div class="menu__card menu__card--7">
+            <div class="menu__description">
+              <div class="menu__txt">
+                <p class="menu__title">Farandole de desserts</p>
+                <p class="menu__receipe">Du chef</p>
+              </div>
+              <div class="menu__price">
+                <p>18€</p>
+              </div>
+              <div class="menu__check">
+                <i class="fa-solid fa-circle-check"></i>
+              </div>
+            </div>
+          </div>
+          <!------------Désserts 2 ---------->
+          <div class="menu__card menu__card--8">
+            <div class="menu__description">
+              <div class="menu__txt">
+                <p class="menu__title">Crème brulée</p>
+                <p class="menu__receipe">Revisitée</p>
+              </div>
+              <div class="menu__price">
+                <p>22€</p>
+              </div>
+              <div class="menu__check">
+                <i class="fa-solid fa-circle-check"></i>
+              </div>
+            </div>
+          </div>
+          <!------------Désserts 3 ---------->
+          <div class="menu__card menu__card--9">
+            <div class="menu__description">
+              <div class="menu__txt">
+                <p class="menu__title">Tiramisu</p>
+                <p class="menu__receipe">À la noisette</p>
+              </div>
+              <div class="menu__price">
+                <p>23€</p>
+              </div>
+              <div class="menu__check">
+                <i class="fa-solid fa-circle-check"></i>
               </div>
             </div>
           </div>
