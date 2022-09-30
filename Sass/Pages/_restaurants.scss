@@ -1,154 +1,142 @@
-body{
-    font-size: roboto;
-
+body {
+  font-size: roboto;
 }
 
-.restaurant__image{
-    width: 100%;
-    object-fit: cover;
-    object-position: center bottom;
-
+.restaurant__image {
+  width: 100%;
+  object-fit: cover;
+  object-position: 100% 70%;
+  max-height: 50vh;
 }
 
 header {
-    
-    & .header__title{
-        padding-left: 30px;
-        display: flex;
-        align-items: center;
-        justify-content:space-between;
-        
-        
-    }
-   
-    & a{
-     height: 100%;
-     width: 20px;
-     font-size : 20px;
-     font-weight: bold;
-    }
-
-}
-.menu{
-    background-color: $light-grey;
+  & .header__title {
+    padding-left: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: relative;
-    bottom: 45PX;
-    border-top-left-radius: 40px;
-    border-top-right-radius: 40px;
-    padding: 0 2% 0 2%;
-    overflow: hidden;
-   
+    .fleche {
+      width: 20px;
+      font-size: 20px;
+      font-weight: bold;
+      position: absolute;
+      left: 30px;
+      top: 30px;
+    }
+  }
+}
+.menu {
+  background-color: $light-grey;
+  position: relative;
+  bottom: 45px;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+  padding: 0 2% 0 2%;
+  overflow: hidden;
 
-    &__head{
+  &__head {
     display: flex;
     align-items: center;
     padding: 10px;
+  }
+  &__composition {
+    @include desktop {
+      display: flex;
+      justify-content: space-around;
     }
-    .card__icon{
-        bottom:unset;
-    }
+  }
+  .card__icon {
+    bottom: unset;
+  }
 
-    & span {
+  & span {
     text-decoration: underline $color-tertiary 3px;
     text-underline-offset: 7px;
+  }
+  .light {
+    margin-bottom: 30px;
+  }
 }
-    .light{
-        margin-bottom:30px;
+
+.menu__card {
+  cursor: pointer;
+  animation: translateCard 1s forwards;
+  visibility: hidden;
+  transform: translateY(100%);
+
+  @for $i from 1 through 10 {
+    &--#{$i} {
+      animation-delay: 0.3s * $i;
     }
-    
-}
+  }
 
-.menu__card{
-    cursor: pointer;
-    animation: translateCard 1s forwards;
-    visibility: hidden;
-    transform: translateY(100%);
-
-    @for $i from 1 through 10 {
-        &--#{$i} {  
-          animation-delay: 0.3s *$i;
+  .menu__description {
+    display: flex;
+    background-color: $white;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 20px;
+    border-radius: 15px;
+    margin-bottom: 15px;
+    overflow: hidden;
+    &:hover .menu__check {
+      margin-right: 0;
+      i {
+        transform: rotate(90deg);
+        animation: checkRotate 0.5s 0.5s forwards;
       }
-      }
-    
-
-    .menu__description{
-      display: flex;
-      background-color: $white;
-      box-shadow:rgba(149, 157, 165, 0.2) 0px 8px 20px ;
-      border-radius: 15px;
-      margin-bottom: 15px;
-      overflow: hidden;
-      &:hover .menu__check{
-        margin-right: 0; 
-        i{
-            transform: rotate(90deg);
-            animation: checkRotate 0.5s 0.5s forwards;
-            }  
-        }      
-        & p{
-        padding-left: 10px;
-        padding-top: 5px;
-        margin: 3px;
-
-        }
     }
-
-
-    .menu__title{
-        font-weight:bold;
+    & p {
+      padding-left: 10px;
+      padding-top: 5px;
+      margin: 3px;
     }
-    .menu__receipe{
-        font-weight: 100;
-        padding-bottom: 5px;
-       
-    }
-    .menu_txt {
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-    }
-    .menu__price {
-        font-weight: 600;
-        margin-left:auto;
-        padding: 20px 20px 5px 0px; 
-        display: flex;
-        align-items: flex-end;
-        
-
-    }
-
-    .menu__check {
-        width: 50px;
-        margin-right: -50px;
-        overflow: hidden;
-        display: flex;
-        align-items: center;
-        background-color:$color-tertiary;
-        color: $white;
-        border-radius: 0 15px 15px 0;
-        transition: margin-right 1s ease-in-out;
-    
-        & i{
-        display: flex;
-        align-items: center;
-        margin-left: 12px;
-        
-    }
-    }   
-
-
-}
-.commande{
-    margin: 30px;
-
     @include desktop {
-        width: 20%;
-        bottom: 500px;
-        left: 444px;
+      min-width: 25vw;
     }
+  }
+
+  .menu__title {
+    font-weight: bold;
+  }
+  .menu__receipe {
+    font-weight: 100;
+    padding-bottom: 5px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .menu_txt {
+    min-width: 0; // simulation d'une largeur pour que le ellipsis fonctionne correctement 
+
+  }
+  .menu__price {
+    font-weight: 600;
+    margin-left: auto;
+    padding: 20px 20px 5px 0px;
+    display: flex;
+    align-items: flex-end;
+  }
+
+  .menu__check {
+    width: 50px;
+    margin-right: -50px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    background-color: $color-tertiary;
+    color: $white;
+    border-radius: 0 15px 15px 0;
+    transition: margin-right 1s ease-in-out;
+
+    & i {
+      display: flex;
+      align-items: center;
+      margin-left: 12px;
+    }
+  }
 }
-
-
-
-
-
+.commande {
+  margin: 30px;
+  display: flex;
+  justify-content: center;
+}
