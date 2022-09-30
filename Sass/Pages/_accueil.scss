@@ -23,8 +23,6 @@
     }
 
 }
-
-
 .search{
  
     background-color: $light-grey;
@@ -48,8 +46,7 @@
         padding : 0;
     }
     @include desktop {
-        width: 30%;
-        margin-left: 35%;
+        width: 100%;
         padding: 0;
     }
     }
@@ -74,13 +71,15 @@
 .function{
     padding: 10px;
 
-    @include tablette {
-        display: flex;
-        flex-direction: column;
-       
-    }
     @include desktop {
         display: flex;
+        align-items: center;
+    }
+    &, &__content{
+        @include desktop {
+            display: flex;
+            margin-left: 20px;
+        }
     }
     &__step{
         display: flex;
@@ -91,6 +90,7 @@
         margin-bottom: 20px;
         border-radius:15px;
         box-shadow: 0px 5px 10px $grey ;
+        padding-right: 20px;
         cursor:pointer;
       
     }
@@ -101,6 +101,7 @@
         color:$color-primary;
       }
     } 
+
    
 
     &__number{
@@ -123,23 +124,31 @@
     position: relative;
     
   
-  
     &__content{
         display: flex;
-        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        @include tablette{
+            flex-direction: row;
+        }
+        @include desktop{
+            flex-direction: row;
+        }
     }
     &__block{
-        width: 95%;
         margin: 20px;
-        margin-left: 8px;;
         background-color: $white;
         box-shadow: 0px 5px 10px $grey ;
         border-radius: 15px;
         overflow: hidden;
-        position: relative;
-       
-       
-        
+        position: relative;   
+        width: 100%; 
+        @include tablette{
+            max-width: 40%;
+        }
+        @include desktop{
+            max-width: 20%;
+        }
     }
 
 

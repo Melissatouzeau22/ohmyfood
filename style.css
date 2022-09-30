@@ -137,15 +137,14 @@ a {
 .search__content__icon {
   padding-right: 10px;
 }
-@media screen and (min-width: 426px) and (max-width: 1920px) {
+@media screen and (min-width: 576px) and (max-width: 992px) {
   .search__content {
     padding: 0;
   }
 }
-@media screen and (min-width: 1920px) {
+@media screen and (min-width: 992px) {
   .search__content {
-    width: 30%;
-    margin-left: 35%;
+    width: 100%;
     padding: 0;
   }
 }
@@ -159,7 +158,7 @@ a {
   font-weight: 100;
   font-size: 17px;
 }
-@media screen and (min-width: 426px) and (max-width: 1920px) {
+@media screen and (min-width: 576px) and (max-width: 992px) {
   .search .reserve {
     justify-content: space-around;
   }
@@ -168,15 +167,16 @@ a {
 .function {
   padding: 10px;
 }
-@media screen and (min-width: 426px) and (max-width: 1920px) {
+@media screen and (min-width: 992px) {
   .function {
     display: flex;
-    flex-direction: column;
+    align-items: center;
   }
 }
-@media screen and (min-width: 1920px) {
-  .function {
+@media screen and (min-width: 992px) {
+  .function, .function__content {
     display: flex;
+    margin-left: 20px;
   }
 }
 .function__step {
@@ -188,6 +188,7 @@ a {
   margin-bottom: 20px;
   border-radius: 15px;
   box-shadow: 0px 5px 10px #e6e6e6;
+  padding-right: 20px;
   cursor: pointer;
 }
 .function__step:hover {
@@ -215,17 +216,37 @@ a {
 }
 .card__content {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+@media screen and (min-width: 576px) and (max-width: 992px) {
+  .card__content {
+    flex-direction: row;
+  }
+}
+@media screen and (min-width: 992px) {
+  .card__content {
+    flex-direction: row;
+  }
 }
 .card__block {
-  width: 95%;
   margin: 20px;
-  margin-left: 8px;
   background-color: #fff;
   box-shadow: 0px 5px 10px #e6e6e6;
   border-radius: 15px;
   overflow: hidden;
   position: relative;
+  width: 100%;
+}
+@media screen and (min-width: 576px) and (max-width: 992px) {
+  .card__block {
+    max-width: 40%;
+  }
+}
+@media screen and (min-width: 992px) {
+  .card__block {
+    max-width: 20%;
+  }
 }
 .card__restaurant {
   width: 60%;
@@ -343,39 +364,43 @@ footer__icon {
   opacity: 0;
   transition: 0.5s ease-in-out;
 }
-.card__icon--full:active {
+.card__icon--full:hover {
   opacity: 1;
 }
 
 body {
-  font-size: roboto;
+  font-family: roboto;
 }
 
 .restaurant__image {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  -o-object-position: center bottom;
-     object-position: center bottom;
+  -o-object-position: 100% 70%;
+     object-position: 100% 70%;
+  max-height: 50vh;
 }
 
 header .header__title {
   padding-left: 30px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+  position: relative;
 }
-header a {
-  height: 100%;
+header .header__title .fleche {
   width: 20px;
   font-size: 20px;
   font-weight: bold;
+  position: absolute;
+  left: 30px;
+  top: 30px;
 }
 
 .menu {
   background-color: #f2f2f2;
   position: relative;
-  bottom: 45PX;
+  margin-top: -90px;
   border-top-left-radius: 40px;
   border-top-right-radius: 40px;
   padding: 0 2% 0 2%;
@@ -385,6 +410,12 @@ header a {
   display: flex;
   align-items: center;
   padding: 10px;
+}
+@media screen and (min-width: 992px) {
+  .menu__composition {
+    display: flex;
+    justify-content: space-around;
+  }
 }
 .menu .card__icon {
   bottom: unset;
@@ -466,17 +497,23 @@ header a {
   padding-top: 5px;
   margin: 3px;
 }
+@media screen and (min-width: 992px) {
+  .menu__card .menu__description {
+    min-width: 25vw;
+  }
+}
 .menu__card .menu__title {
   font-weight: bold;
 }
 .menu__card .menu__receipe {
   font-weight: 100;
   padding-bottom: 5px;
-}
-.menu__card .menu_txt {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+.menu__card .menu__txt {
+  min-width: 0;
 }
 .menu__card .menu__price {
   font-weight: 600;
@@ -504,11 +541,6 @@ header a {
 
 .commande {
   margin: 30px;
-}
-@media screen and (min-width: 1920px) {
-  .commande {
-    width: 20%;
-    bottom: 500px;
-    left: 444px;
-  }
+  display: flex;
+  justify-content: center;
 }/*# sourceMappingURL=style.css.map */
