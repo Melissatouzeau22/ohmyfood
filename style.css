@@ -28,7 +28,7 @@
     transform: translateY(0%);
   }
 }
-@-webkit-keyframes loader {
+@keyframes loader {
   from {
     visibility: visible;
   }
@@ -44,7 +44,7 @@
     visibility: hidden;
   }
 }
-@-webkit-keyframes loaderRotate {
+@-keyframes loaderRotate {
   from {
     transform: rotate(0deg);
   }
